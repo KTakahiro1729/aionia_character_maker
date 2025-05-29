@@ -343,6 +343,7 @@ window.onload = function(event){
                     "name": document.getElementById("armor_name").value
                 }
             },
+            "character_memo": document.getElementById("character_text").value,
             "histories": histories
         };
         //console.log(save_data)
@@ -416,7 +417,7 @@ window.onload = function(event){
                 document.getElementById("armor").value = data["equipments"]["armor"]["group"];
                 document.getElementById("armor_name").value = data["equipments"]["armor"]["name"];
                 
-                
+                document.getElementById("character_text").value = data["character_memo"];
 
                 /*
                 let len = Array.from(histories.children).length;
@@ -524,6 +525,7 @@ window.onload = function(event){
         const select_species = character_names.children[2].querySelector("select");
         const species = select_species.options[select_species.selectedIndex].textContent;
         const rare_species = character_names.children[3].querySelector("input").value;
+        const character_memo = document.getElementById("character_text").value;
         var memo = "";
 
         
@@ -609,6 +611,8 @@ window.onload = function(event){
         if (weapon2.value != "") memo += `${weapon2_name}（${weapon2_group}）\n`;
         if (armor.value != "") memo += `${armor_name}（${armor_group}）\n`;
 
+        memo += character_memo;
+        
         var ccfolia_character = {
             "kind": "character",
             "data": {
