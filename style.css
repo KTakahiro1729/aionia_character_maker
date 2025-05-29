@@ -8,7 +8,7 @@ body {
     margin: 0px auto 112px;
 }
 
-#character_info, #init_experiments, #now_status, #skills, #special_skills, #equipments, #session_history {
+#character_info, #init_experiments, #now_status, #skills, #special_skills, #equipments, #session_history, #character_memo {
     border-radius: 8px;
     border:1px solid #404040;
     padding: 4px 8px;
@@ -23,7 +23,7 @@ body {
 #character_info{
     margin: 16px 8px;
 }
-#init_experiments, #now_status, #session_history {
+#init_experiments, #now_status, #session_history, #character_memo {
     margin: 16px 8px 8px;
 }
 #equipments{
@@ -281,6 +281,18 @@ body {
 }
 .history_item_add:hover, .history_item_delete:hover {
     background-color: #80808080;
+}
+
+#character_memo textarea {
+    resize: vertical;
+    width: 840px;
+    margin: 10px;
+    padding: 6px;
+}
+
+#character_memo textarea:focus {
+    outline: 0px solid #000000;
+    border-color: #00d0d0;
 }
 
 #footer_left {
